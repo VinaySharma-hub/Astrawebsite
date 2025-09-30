@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Astra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pap5C5EwUo5bS9XjkgCQj/EXAMPLEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #000000, #160101, #010d2e, #0a0a4f);
+
+      color: white;
+      overflow-x: hidden;
+    }
+    .backface-hidden {
+  backface-visibility: hidden;
+}
+
+   
+    .stars {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("https://www.transparenttextures.com/patterns/stardust.png");
+      z-index: -1;
+      animation: moveStars 60s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    model-viewer {
+      width: 500px;
+      height: 500px;
+      --poster-color: transparent;
+      transition: transform 0.2s ease-out;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body class="relative">
+
+  
+  <div class="stars"></div>
+
+
+ <nav class="fixed top-9 left-8 w-full flex justify-between items-center px-8 py-2
+           
+            shadow-lg z-50 rounded-b-2xl  right-3 ">
+  <div class="flex items-center gap-4 overflow-visible">
+    <img src="logo.png" alt="Logo" class="h-16 w-16 rounded-full">
+  </div>
+
+ 
+  <ul class="hidden md:flex gap-10 text-gray-150 text-xl">
+    <li>
+      <a href="#Team" class=" scroll-smooth text-gray-200  hover:text-purple-900 hover:underline">Team</a>
+    </li>
+    <li>
+      <a href="#sponsors" class="text-gray-200 hover:text-purple-900 hover:underline">Sponsors</a>
+    </li>
+    <li>
+      <a href="#Bronch" class="text-gray-200 hover:text-purple-900 hover:underline">Bronchure</a>
+    </li>
+    <li>
+      <a href="#Project" class="text-gray-200 hover:text-purple-900 hover:underline">Projects</a>
+    </li>
+    <li>
+      <a href="#roadmap" class="text-gray-200 hover:text-purple-900 hover:underline">Road Map</a>
+    </li>
+     <li>
+      <a href="#contact" class="text-gray-200 hover:text-purple-900 hover:underline">Contact Us</a>
+    </li>
+  </ul>
+
+  <button class="bg-blue-400 hover:bg-blue-500 px-3 py-2 rounded-lg font-semibold text-white">
+    Join Us
+  </button>
+</nav>
+
+
+<section class="flex flex-col md:flex-row items-center top-24 justify-between text-center md:text-left px-6 py-20 relative max-w-7xl mx-auto gap-50  ">
+  
+  
+ <div class="flex-1">
+
+  <div class="bg-blue-900/40 px-4 py-1 rounded-full  mb-6 inline-block font-[Orbitron] tracking-widest text-purple-700">
+     SAE COLLEGIATE CLUB IIITDM Kancheepuram
+  </div>
+
+  <!-- Title -->
+  <h1 class="text-6xl md:text-7xl mb-6 font-[Orbitron] font-black uppercase">
+    <span class="text-white drop-shadow-[0_0_25px_#15aafa]">TEAM</span> 
+    <span class="text-blue-600 drop-shadow-[0_0_25px_#15aafa]">ASTRA</span>
+  </h1>
+
+  <!-- Subtitle -->
+  <p class="max-w-2xl text-gray-300 text-xl mb-8 font-lightbold tracking-wide leading-relaxed px-6 drop-shadow-[0_0_25px_#15aafa]">
+<span class="role"></span>
+  </p>
+  <!-- Buttons -->
+  <div class="flex gap-6 mb-12 justify-center md:justify-start">
+    <a href="#join" 
+       class="bg-#001321 hover:bg-black-900 hover:translate-y-1 hover: px-6 py-3 rounded-lg font-semibold shadow-lg tracking-wide transition duration-300 ease-in-out text-color-grey">
+       <span class="block group-hover:hidden">Join Our Team</span>
+    </a>
+    <a href="#events" 
+       class="bg-gray-900 hover:bg-black px-6 py-3 rounded-lg font-semibold shadow-lg tracking-wide transition duration-300 ease-in-out">
+      Explore Projects
+    </a>
+  </div>
+</div>
+
+
+
+  
+  <div class="flex-1 flex justify-center">
+    <model-viewer 
+      id="droneModel"
+      src="drone.glb"  
+      alt="A 3D drone"
+      auto-rotate
+      rotation-per-second="15deg"
+      camera-controls
+      shadow-intensity="1"
+      disable-zoom
+      class="w-[400px] h-[400px] md:w-[500px] md:h-[500px]">
+    </model-viewer>
+  </div>
+
+</section>
+
+<div class=" p-8 rounded-2xl">
+  <div class="flex flex-row items-center">
+   
+  <span class="text-[14rem] pr--4 font-extrabold text-purple-400 opacity-40 inline-block">1</span>
+
+   
+    <div class="ml-2" >
+      <h2 class="text-5xl font-bold text-gray-400 tracking-wide scroll-mt-20 scroll-smooth" id="Team">MEET THE TEAM</h2>
+      <p class="text-gray-100 py-2">
+        Meet the individuals Who are leading our club, organize events, and mentor new members and Projects.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 ">
+      
+     
+      <div class="group w-100 h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition " data-aos="zoom-in">
+  <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    
+    
+    <div class="absolute inset-0 bg-[#111827] rounded-2xl shadow-lg flex flex-col items-center justify-center backface-hidden">
+      <img src="person1.jpg" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6"> <h4 class="text-xl font-semibold">Abhisek Sen</h4> <p class="text-blue-400">Captain</p> 
+      <p class="text-gray-200 text-sm mt-2">Fourth year undergraduate in Electronics Engineering</p>
+    </div>
+
+   
+    <div class="absolute inset-0 bg-[#1f2937] rounded-2xl shadow-lg flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden">
+      <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
+      <div class="flex flex-col gap-4 text-gray-200 text-lg">
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400">
+          <i class="fab fa-github text-2xl"></i> GitHub
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-blue-600">
+          <i class="fab fa-linkedin text-2xl"></i> LinkedIn
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-pink-500">
+          <i class="fab fa-instagram text-2xl"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person2.jpg" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-xl font-semibold">Srivathsa Thotakura</h4>
+        <p class="text-blue-400">Electronics and Robotics Club Manager</p>
+        <p class="text-gray-400 text-sm mt-2">Pre-final year undergraduate in Electrical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+   
+    <h3 class="text-2xl font-semibold mb-8">Core Team</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      
+      
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person3.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Aditya Patel</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Electrical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person4.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Aswath Sahoo</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Mechanical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person5.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Daksh Makwana</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Metallurgical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person6.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Dhruv Singla</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Electrical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ 
+    <h3 class="text-2xl font-semibold mb-8"></h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      
+     
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person3.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Aditya Patel</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Electrical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+  <img src="person4.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+  <h4 class="text-lg font-semibold text-center">Aswath Sahoo</h4>
+  <p class="text-blue-400 text-center">Convenor</p>
+  <p class="text-gray-400 text-sm mt-2 text-center">Sophomore undergraduate in Mechanical Engineering</p>
+  <div class="flex justify-center gap-4 mt-4 text-gray-400 text-xl">
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person5.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Daksh Makwana</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Metallurgical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="bg-[#111827] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/30 transition">
+        <img src="person6.jpg" alt="Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-6">
+        <h4 class="text-lg font-semibold">Dhruv Singla</h4>
+        <p class="text-blue-400">Convenor</p>
+        <p class="text-gray-400 text-sm mt-2">Sophomore undergraduate in Electrical Engineering</p>
+        <div class="flex justify-center gap-4 mt-4 text-gray-400">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-20  text-white">
+  <div class="max-w-7xl mx-auto px-6 ">
+
+<div class="  rounded-2xl">
+  <div class="flex flex-row items-center justify-end">
+  
+  <span class="text-[14rem] pl-[4rem] font-extrabold text-purple-400 opacity-40 inline-block text-align:right">2</span>
+
+   
+    <div class="ml-2">
+      <h2 class="text-5xl font-bold text-white tracking-wide">Astra Projects</h2>
+      <p class="text-gray-300 ">
+       Explore our journey through drones, innovation, and competitions.
+    </div>
+  </div>
+</div>    
+   
+   <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    
+  
+    <div class="swiper-slide">
+      <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left 
+                  transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/40 h-auto">
+        <img src="drone1.jpg" alt="Drone Project" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-center">Autonomous Drone</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Our autonomous drone project focuses on AI-based navigation 
+          using computer vision. It can detect obstacles, follow paths, 
+          and adapt to changing environments, ensuring safety and efficiency 
+          during critical missions. Perfect for real-world applications!
+        </p>
+      </div>
+    </div>
+
+  
+    <div class="swiper-slide">
+      <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left 
+                  transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/40 h-auto">
+        <img src="drone2.jpg" alt="Drone Workshop" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-center">Drone Workshop</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          We conducted an engaging workshop where students built drones 
+          from scratch. From assembling motors to flight calibration, 
+          participants explored hands-on drone mechanics and learned 
+          essential UAV technologies with teamwork and innovation.
+        </p>
+      </div>
+    </div>
+
+  
+    <div class="swiper-slide">
+      <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left 
+                  transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-green-500/40 h-auto">
+        <img src="drone3.jpg" alt="Competition" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-center">Competition Highlights</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Team Astra participated in inter-college drone racing events, 
+          showcasing speed, stability, and cutting-edge flight control. 
+          Our prototypes competed with top teams, proving our dedication 
+          towards UAV excellence and engineering innovation.
+        </p>
+      </div>
+    </div>
+
+    
+    <div class="swiper-slide">
+      <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left 
+                  transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-pink-500/40 h-auto">
+        <img src="drone4.jpg" alt="Team Astra" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-center">Team Astra</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Meet our passionate engineers and innovators. Team Astra blends 
+          creativity, coding, and mechanical expertise to develop drones 
+          for multiple domains. Our mission: inspire, innovate, and 
+          revolutionize drone technology across industries.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+ 
+  <div class="swiper-pagination"></div>
+</div>
+
+<section class="py-[200px] text-white" id="sponsors">
+  <div class="max-w-8xl mx-auto px-6 text-center">
+
+  
+    <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Our Family of Sponsors</h2>
+    <p class="text-gray-300 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">
+      Sponsors have played a vital role in the emergence of Mars Rover Society, IIITDM as one of the leading teams of the world. 
+      It is the constant support of our sponsors in terms of financial and technical resources that has kept us going to pursue our goals. 
+      We are grateful to all our sponsors for their support and hope to augment our relationship.
+    </p>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-center">
+      
+      
+      <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
+        <img src="iiitdm.png" alt="IIITDM Kancheepuram" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <p class="mt-4 text-lg font-semibold">IIITDM Kancheepuram</p>
+      </div>
+     
+      <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
+        <img src="dic.png" alt="DIC" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <p class="mt-4 text-lg font-semibold">DIC</p>
+      </div>
+      
+   
+      <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
+        <img src="tlc.png" alt="TLC" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <p class="mt-4 text-lg font-semibold">TLC</p>
+      </div>
+
+     
+      <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
+        <img src="solid.png" alt="Sponsor 4" class="h-28 w-auto hover:scale-110 transition-transform duration-500">
+        <p class="mt-4 text-lg font-semibold">Solid Works</p>
+      </div>
+
+   
+      <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
+        <img src="anys.png" alt="Sponsor 5" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <p class="mt-4 text-lg font-semibold">Anys</p>
+      </div>
+
+     
+      <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
+        <img src="altium.png" alt="Sponsor 6" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <p class="mt-4 text-lg font-semibold">Altium</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 text-white" id="brochures">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    
+<div class=" p-8 rounded-2xl">
+  <div class="flex flex-row items-center justify-begin">
+
+  <span class="text-[14rem] font-extrabold text-purple-400 opacity-40 inline-block">3</span>
+
+
+    <div class="ml-2">
+      <h2 class="text-5xl font-bold text-white tracking-wide">MEET THE TEAM</h2>
+      <p class="text-gray-300 ">
+        Meet the individuals who lead our club, organize events, and mentor new members.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+     
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-2">Brochure Title 1</h3>
+        <p class="text-gray-400 mb-2">Scroll inside the PDF to view content.</p>
+        <iframe src="brochure1.pdf" class="w-full h-80 rounded-lg border border-gray-700" frameborder="0"></iframe>
+      </div>
+
+     
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold mb-2">Brochure Title 2</h3>
+        <p class="text-gray-400 mb-2">Scroll inside the PDF to view content.</p>
+        <iframe src="brochure2.pdf" class="w-full h-80 rounded-lg border border-gray-700" frameborder="0"></iframe>
+      </div>
+
+      
+      <div class="bg-gray-900 p-4 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold mb-2">Brochure Title 3</h3>
+        <p class="text-gray-400 mb-2">Scroll inside the PDF to view content.</p>
+        <iframe src="brochure3.pdf" class="w-full h-80 rounded-lg border border-gray-700" frameborder="0"></iframe>
+      </div>
+
+ 
+
+    </div>
+  </div>
+</section>
+<body class="font-sans bg-slate-900 text-gray-200 p-5 overflow-x-hidden">
+    <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-sky-500 mb-2">ROADMAP</h1>
+        <h2 class="text-2xl text-blue-400 mb-10">Key Milestones & Competitions on the Horizon</h2>
+
+        <div class="relative w-full overflow-x-auto pb-5 no-scrollbar">
+            <div class="absolute w-full h-1 bg-gray-700 top-1/2 -translate-y-1/2 z-0"></div>
+            <div class="flex relative pt-12 pb-12 min-w-fit">
+                <!-- Event Card 1 -->
+                <div class="event-card relative bg-slate-800 rounded-lg p-4 mx-5 min-w-[180px] text-left shadow-lg transition-all duration-300 ease-in-out cursor-pointer z-10 h-32 overflow-hidden hover:scale-105 hover:shadow-2xl hover:bg-slate-700 hover:h-48 group">
+                    <span class="block text-lg font-bold text-cyan-400 mb-1">12 JUL</span>
+                    <p class="text-sm text-gray-300">XYZ</p>
+                    <div class="card-details text-xs text-gray-400 mt-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">More info about XYZ event on July 12th.</div>
+                    <!-- Ticking indicator -->
+                    <div class="absolute w-4 h-4 bg-cyan-400 rounded-full bottom-[-22px] left-1/2 -translate-x-1/2 z-20 border-4 border-slate-900"></div>
+                </div>
+                <!-- Event Card 2 -->
+                <div class="event-card relative bg-slate-800 rounded-lg p-4 mx-5 min-w-[180px] text-left shadow-lg transition-all duration-300 ease-in-out cursor-pointer z-10 h-32 overflow-hidden hover:scale-105 hover:shadow-2xl hover:bg-slate-700 hover:h-48 group">
+                    <span class="block text-lg font-bold text-cyan-400 mb-1">03,04 Sep</span>
+                    <p class="text-sm text-gray-300">Technoduction</p>
+                    <div class="card-details text-xs text-gray-400 mt-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">Details about Technoduction on September 3rd & 4th.</div>
+                    <!-- Ticking indicator -->
+                    <div class="absolute w-4 h-4 bg-cyan-400 rounded-full bottom-[-22px] left-1/2 -translate-x-1/2 z-20 border-4 border-slate-900"></div>
+                </div>
+                <!-- Event Card 3 -->
+                <div class="event-card relative bg-slate-800 rounded-lg p-4 mx-5 min-w-[180px] text-left shadow-lg transition-all duration-300 ease-in-out cursor-pointer z-10 h-32 overflow-hidden hover:scale-105 hover:shadow-2xl hover:bg-slate-700 hover:h-48 group">
+                    <span class="block text-lg font-bold text-cyan-400 mb-1">12 JUL</span>
+                    <p class="text-sm text-gray-300">XYZ</p>
+                    <div class="card-details text-xs text-gray-400 mt-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">Another XYZ event detail.</div>
+                    <!-- Ticking indicator -->
+                    <div class="absolute w-4 h-4 bg-cyan-400 rounded-full bottom-[-22px] left-1/2 -translate-x-1/2 z-20 border-4 border-slate-900"></div>
+                </div>
+                <!-- Event Card 4 -->
+                <div class="event-card relative bg-slate-800 rounded-lg p-4 mx-5 min-w-[180px] text-left shadow-lg transition-all duration-300 ease-in-out cursor-pointer z-10 h-32 overflow-hidden hover:scale-105 hover:shadow-2xl hover:bg-slate-700 hover:h-48 group">
+                    <span class="block text-lg font-bold text-cyan-400 mb-1">12 JUL</span>
+                    <p class="text-sm text-gray-300">XYZ</p>
+                    <div class="card-details text-xs text-gray-400 mt-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">Additional information for XYZ event.</div>
+                    <!-- Ticking indicator -->
+                    <div class="absolute w-4 h-4 bg-cyan-400 rounded-full bottom-[-22px] left-1/2 -translate-x-1/2 z-20 border-4 border-slate-900"></div>
+                </div>
+                 <!-- Event Card 5 -->
+                <div class="event-card relative bg-slate-800 rounded-lg p-4 mx-5 min-w-[180px] text-left shadow-lg transition-all duration-300 ease-in-out cursor-pointer z-10 h-32 overflow-hidden hover:scale-105 hover:shadow-2xl hover:bg-slate-700 hover:h-48 group">
+                    <span class="block text-lg font-bold text-cyan-400 mb-1">12 JUL</span>
+                    <p class="text-sm text-gray-300">XYZ</p>
+                    <div class="card-details text-xs text-gray-400 mt-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">Final XYZ event details.</div>
+                    <!-- Ticking indicator -->
+                    <div class="absolute w-4 h-4 bg-cyan-400 rounded-full bottom-[-22px] left-1/2 -translate-x-1/2 z-20 border-4 border-slate-900"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const timelineWrapper = document.querySelector('.overflow-x-auto');
+
+            // Optional: Add smooth scrolling for desktop if desired
+            if (timelineWrapper) {
+                timelineWrapper.addEventListener('wheel', (e) => {
+                    if (e.deltaY !== 0) {
+                        e.preventDefault();
+                        timelineWrapper.scrollLeft += e.deltaY;
+                    }
+                });
+            }
+        });
+    const drone = document.getElementById("droneModel");
+
+    // Parallax hover effect + rotation (auto handled by model-viewer)
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 100; // left-right
+      const y = (e.clientY / window.innerHeight - 0.5) * 60;  // up-down
+      drone.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  AOS.init({
+    duration: 1200, // animation speed
+    once: true,     // animate only once
+    offset: 100     // trigger offset
+  });
+
+  var typeData = new Typed(".role", {
+  strings: [
+    "Exploring the final frontier",
+    "Innovating Aerospace",
+    "Launching Dreams into orbit",
+    "Coding for the stars and Sky ",
+    "Building Drones, building futures",
+    "Where curiosity meets technology",
+    "Pioneering the next frontier",
+    "Engineering tomorrow today Yesterday too"
+  ],
+  typeSpeed: 50,
+  backSpeed: 30,
+  backDelay: 1500,
+  loop: true,
+  showCursor: true,
+  cursorChar: "|"
+});
+
+  </script>
+
+</body>
+</html>
