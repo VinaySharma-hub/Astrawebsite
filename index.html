@@ -14,6 +14,8 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
   <style>
     body {
       margin: 0;
@@ -58,7 +60,7 @@
   <div class="stars"></div>
 
 
-<nav class="fixed top-2 left-5 w-full flex justify-center items-center px-5 py-6
+<nav class="fixed top-2 left-5 w-full flex justify-center items-center p-4 py-4
             shadow-lg z-50 rounded-b-2xl bg-slate-600">
   
   <!-- Logo on left -->
@@ -69,22 +71,22 @@
   <!-- Centered Menu -->
   <ul class="flex gap-16 text-gray-150 text-lg items-center">
     <li>
-      <a href="#Team" class="scroll-smooth text-gray-200 hover:text-purple-900 hover:underline">Team</a>
+      <a href="#Team" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Team</a>
     </li>
     <li>
-      <a href="#sponsors" class="text-gray-200 hover:text-purple-900 hover:underline">Sponsors</a>
+      <a href="#Projects" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Projects</a>
     </li>
     <li>
-      <a href="#Bronch" class="text-gray-200 hover:text-purple-900 hover:underline">Brochure</a>
+      <a href="#sponsors" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Sponsors</a>
     </li>
     <li>
-      <a href="#Project" class="text-gray-200 hover:text-purple-900 hover:underline">Projects</a>
+      <a href="#bronchure" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Brochure</a>
     </li>
     <li>
-      <a href="#roadmap" class="text-gray-200 hover:text-purple-900 hover:underline">Road Map</a>
+      <a href="#Roadmap" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Road Map</a>
     </li>
     <li>
-      <a href="#contact" class="text-gray-200 hover:text-purple-900 hover:underline">Contact Us</a>
+      <a href="#Contact" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Contact Us</a>
     </li>
   </ul>
 </nav>
@@ -347,7 +349,7 @@
 
    
     <div class="ml-2">
-      <h2 class="text-5xl font-bold text-white tracking-wide">Astra Projects</h2>
+      <h2  id="Projects" class="text-5xl font-bold text-white tracking-wide">Astra Projects</h2>
       <p class="text-gray-300 ">
        Explore our journey through drones, innovation, and competitions.
     </div>
@@ -481,7 +483,7 @@
   </div>
 </section>
 
-<section class="py-20 text-white" id="brochures">
+<section class="py-20 text-white" id="bronchure">
   <div class="max-w-6xl mx-auto  text-center">
 
     
@@ -540,7 +542,7 @@
 </section>
 <body class="font-sans bg-slate-900 text-gray-200 p-5 overflow-x-hidden">
     <div class="max-w-6xl mx-auto text-center">
-        <h1 class="text-5xl font-bold text-sky-500 mb-2">ROADMAP</h1>
+        <h1 id="Roadmap" class="text-5xl font-bold text-sky-500 mb-2">ROADMAP</h1>
         <h2 class="text-2xl text-blue-400 mb-10">Key Milestones & Competitions on the Horizon</h2>
 
         <div class="relative w-full overflow-x-auto pb-5 no-scrollbar">
@@ -593,7 +595,7 @@
 <div class="  rounded-2xl">
   <div class="flex flex-row items-center justify-end">
   
-  <span class="text-[6rem] pl-[4rem] font-extrabold text-sky-500 p-3 inline-block text-align:right">Contact Us</span>
+  <span id="Contact" class="text-[6rem] pl-[4rem] font-extrabold text-sky-500 p-3 inline-block text-align:right">Contact Us</span>
 </div>    
 <!-- Main Container -->
 <div class="min-h-screen flex items-center justify-center bg-[#0a0a2e] p-6">
@@ -713,7 +715,19 @@
   cursorChar: "|"
 });
 
-  </script>
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+</script>
+ 
 
 </body>
 </html>
