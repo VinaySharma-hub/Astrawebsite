@@ -17,7 +17,7 @@
   <style>
     body {
       margin: 0;
-      background: radial-gradient(circle at center, #000000, #160101, #010d2e, #0a0a4f);
+      background: radial-gradient(circle at center, #000000, #160101, #010d2e, #4c515f);
 
       color: white;
       overflow-x: hidden;
@@ -58,23 +58,24 @@
   <div class="stars"></div>
 
 
- <nav class="fixed top-9 left-8 w-full flex justify-between items-center px-8 py-2
-           
-            shadow-lg z-50 rounded-b-2xl  right-3 ">
-  <div class="flex items-center gap-4 overflow-visible">
+<nav class="fixed top-2 left-5 w-full flex justify-center items-center px-5 py-6
+            shadow-lg z-50 rounded-b-2xl bg-slate-600">
+  
+  <!-- Logo on left -->
+  <div class="absolute left-5 flex items-center gap-2">
     <img src="assets/images/logo.png" alt="Logo" class="h-16 w-16 rounded-full">
   </div>
 
- 
-  <ul class="hidden md:flex gap-10 text-gray-150 text-xl">
+  <!-- Centered Menu -->
+  <ul class="flex gap-16 text-gray-150 text-lg items-center">
     <li>
-      <a href="#Team" class=" scroll-smooth text-gray-200  hover:text-purple-900 hover:underline">Team</a>
+      <a href="#Team" class="scroll-smooth text-gray-200 hover:text-purple-900 hover:underline">Team</a>
     </li>
     <li>
       <a href="#sponsors" class="text-gray-200 hover:text-purple-900 hover:underline">Sponsors</a>
     </li>
     <li>
-      <a href="#Bronch" class="text-gray-200 hover:text-purple-900 hover:underline">Bronchure</a>
+      <a href="#Bronch" class="text-gray-200 hover:text-purple-900 hover:underline">Brochure</a>
     </li>
     <li>
       <a href="#Project" class="text-gray-200 hover:text-purple-900 hover:underline">Projects</a>
@@ -82,14 +83,10 @@
     <li>
       <a href="#roadmap" class="text-gray-200 hover:text-purple-900 hover:underline">Road Map</a>
     </li>
-     <li>
+    <li>
       <a href="#contact" class="text-gray-200 hover:text-purple-900 hover:underline">Contact Us</a>
     </li>
   </ul>
-
-  <button class="bg-blue-400 hover:bg-blue-500 px-3 py-2 rounded-lg font-semibold text-white">
-    Join Us
-  </button>
 </nav>
 
 
@@ -98,31 +95,53 @@
   
  <div class="flex-1">
 
-  <div class="bg-blue-900/40 px-4 py-1 rounded-full  mb-6 inline-block font-[Orbitron] tracking-widest text-purple-700">
-     SAE COLLEGIATE CLUB IIITDM Kancheepuram
-  </div>
-
+   <p class="max-w-2xl text-gray-300 text-2xl mb-8 font-lightbold tracking-wide leading-relaxed px-6 drop-shadow-[0_0_25px_#15aafa]">
+<span class="role"></span>
+  </p>
   <!-- Title -->
-  <h1 class="text-6xl md:text-7xl mb-6 font-[Orbitron] font-black uppercase">
+  <h1 class="text-6xl md:text-6xl mb-6 font-[Orbitron] font-black uppercase">
     <span class="text-white drop-shadow-[0_0_25px_#15aafa]">TEAM</span> 
     <span class="text-blue-600 drop-shadow-[0_0_25px_#15aafa]">ASTRA</span>
   </h1>
 
   <!-- Subtitle -->
-  <p class="max-w-2xl text-gray-300 text-xl mb-8 font-lightbold tracking-wide leading-relaxed px-6 drop-shadow-[0_0_25px_#15aafa]">
-<span class="role"></span>
-  </p>
+ 
+  <p class=" text-gray-300 text-lg">
+     We are a hub for UAV and drone innovation—uniting enthusiasts 
+     to explore aerial robotics through design challenges, skill-building workshops, and real-world applications.
+    </p>
   <!-- Buttons -->
-  <div class="flex gap-6 mb-12 justify-center md:justify-start">
-    <a href="#join" 
-       class="bg-#001321 hover:bg-black-900 hover:translate-y-1 hover: px-6 py-3 rounded-lg font-semibold shadow-lg tracking-wide transition duration-300 ease-in-out text-color-grey">
-       <span class="block group-hover:hidden">Join Our Team</span>
-    </a>
-    <a href="#events" 
-       class="bg-gray-900 hover:bg-black px-6 py-3 rounded-lg font-semibold shadow-lg tracking-wide transition duration-300 ease-in-out">
-      Explore Projects
-    </a>
-  </div>
+<div class="flex gap-6 mb-20 py-9 justify-center md:justify-start">
+  <a href="#Contactus" 
+     class="relative bg-indigo-950 text-gray-200 px-6 py-3 rounded-lg font-bold shadow-lg tracking-wide 
+            transition-all duration-300 ease-in-out overflow-hidden group hover:shadow-2xl hover:scale-125">
+     
+     <!-- Normal text -->
+     <span class="block group-hover:opacity-0 transition-opacity duration-300">
+       Join Team
+     </span>
+     
+     <!-- Optional hidden text / icon (shows after hover) -->
+     <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
+       
+     </span>
+  </a>
+
+  <!-- Explore Projects Button -->
+  <a href="#events" 
+     class="relative bg-gray-900 text-gray-200 px-6 py-3 rounded-lg font-semibold shadow-lg tracking-wide 
+            transition-all duration-300 ease-in-out overflow-hidden group hover:shadow-xl hover:scale-105">
+     
+     <span class="block group-hover:opacity-0 transition-opacity duration-300">
+       Explore Projects
+     </span>
+     
+     <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+       ✨
+     </span>
+  </a>
+</div>
+
 </div>
 
 
@@ -131,7 +150,7 @@
   <div class="flex-1 flex justify-center">
     <model-viewer 
       id="droneModel"
-      src="drone.glb"  
+      src="assets/models/drone.glb"  
       alt="A 3D drone"
       auto-rotate
       rotation-per-second="15deg"
@@ -424,37 +443,37 @@
       
       
       <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
-        <img src="iiitdm.png" alt="IIITDM Kancheepuram" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <img src="assets/images/iiitdm.png" alt="IIITDM Kancheepuram" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
         <p class="mt-4 text-lg font-semibold">IIITDM Kancheepuram</p>
       </div>
      
       <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-        <img src="dic.png" alt="DIC" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <img src="assets/images/dic.png" alt="DIC" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
         <p class="mt-4 text-lg font-semibold">DIC</p>
       </div>
       
    
       <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
-        <img src="tlc.png" alt="TLC" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <img src="assets/images/tlc.png" alt="TLC" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
         <p class="mt-4 text-lg font-semibold">TLC</p>
       </div>
 
      
       <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
-        <img src="solid.png" alt="Sponsor 4" class="h-28 w-auto hover:scale-110 transition-transform duration-500">
+        <img src="assets/images/solid.png" alt="Sponsor 4" class="h-28 w-auto hover:scale-110 transition-transform duration-500">
         <p class="mt-4 text-lg font-semibold">Solid Works</p>
       </div>
 
    
       <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
-        <img src="anys.png" alt="Sponsor 5" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <img src="assets/images/anys.png" alt="Sponsor 5" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
         <p class="mt-4 text-lg font-semibold">Anys</p>
       </div>
 
      
       <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
-        <img src="altium.png" alt="Sponsor 6" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
-        <p class="mt-4 text-lg font-semibold">Altium</p>
+        <img src="assets/images/altium.png" alt="Sponsor 6" class="h-28 w-auto hover:scale-110 transition-transform duration-500 rounded-full">
+        <p class="mt-4 text-lg font-semibold shadow">Altium</p>
       </div>
 
     </div>
