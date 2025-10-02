@@ -272,39 +272,56 @@
   <div class="stars"></div>
 
 
-  <nav class="fixed top-2 left-5 w-full flex justify-center items-center p-4 py-4
-            shadow-lg z-50 rounded-b-2xl bg-slate-600">
-  
-  <!-- Logo on left -->
-  <div class="absolute left-5 flex items-center gap-2">
-    <img src="assets/images/logo.png" alt="Logo" class="h-16 w-16 rounded-full">
-  </div>
+  <nav id="navbar" class="flex justify-between items-center px-10 py-4 bg-transparent fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300">
+        <!-- Logo on left -->
+        <div class="flex items-center gap-4">
+            <div class="h-14 w-16 ">
+                <img src="assets/images/logo.png" alt="" class="rounded-full">
+            </div>
+            <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent"></span>
+        </div>
 
-  <!-- Centered Menu -->
-  <ul class="flex gap-16 text-gray-150 text-lg items-center">
-    <li>
-      <a href="#Team" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Team</a>
-    </li>
-    <li>
-      <a href="#Projects" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Projects</a>
-    </li>
-    <li>
-      <a href="#sponsors" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Sponsors</a>
-    </li>
-    <li>
-      <a href="#brochure" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Brochure</a>
-    </li>
-    <li>
-      <a href="#Roadmap" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Road Map</a>
-    </li>
-    <li>
-      <a href="#Gallery" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Gallery</a>
-    </li>
-    <li>
-      <a href="#Contact" class="nav-link text-gray-200 hover:text-purple-900 hover:underline">Contact Us</a>
-    </li>
-  </ul>
-</nav>
+        <!-- Centered Menu -->
+        <ul class="flex gap-16 text-lg items-center">
+            <li>
+                <a href="#team" class="text-gray-200 hover:text-purple-400 transition-colors duration-300 relative group">
+                    Team
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#sponsors" class="text-gray-200 hover:text-purple-400 transition-colors duration-300 relative group">
+                    Sponsors
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#brochure" class="text-gray-200 hover:text-purple-400 transition-colors duration-300 relative group">
+                    Brochure
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="text-gray-200 hover:text-purple-400 transition-colors duration-300 relative group">
+                    Projects
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#roadmap" class="text-gray-200 hover:text-purple-400 transition-colors duration-300 relative group">
+                    Road Map
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="text-gray-200 hover:text-purple-400 transition-colors duration-300 relative group">
+                    Contact Us
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
 
   <section
     class="flex flex-col md:flex-row items-center top-24 justify-between text-center md:text-left px-6 py-20 relative max-w-7xl mx-auto gap-50  ">
