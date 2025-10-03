@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Astra</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="icon" type="image/png" sizes="512x512" href="static/assets/images/logo-removebg-preview.png" />
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -179,8 +180,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
             <div class="flex-shrink-0">
-                <a href="#" class="flex items-center gap-2">
-                    <img src="assets/images/logo.png" alt="Logo" class="h-16 w-16 rounded-full">
+                <a href="" class="flex items-center gap-2">
+                    <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Logo" class="h-16 w-16 rounded-full">
                 </a>
             </div>
 
@@ -245,7 +246,7 @@
 <div class="flex justify-center items-center h-screen ">
     <model-viewer 
         class="w-96 h-96 "
-        src="assets/models/drone1.glb"
+        src="{{ url_for('static', filename='assets/models/drone.glb') }}"
         alt="A 3D drone"
         auto-rotate
         rotation-per-second="15deg"
@@ -270,7 +271,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                      <img src="assets/images/abhisek.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                      <img src="{{ url_for('static', filename='assets/images/abhisek.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Abhisek Sen</h4>
                       <p class="text-blue-400">Captain</p>
                   </div>
@@ -287,7 +288,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="100">
             <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                <img src="assets/images/nesanth.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                <img src="{{ url_for('static', filename='assets/images/nesanth.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                 <h4 class="text-xl font-semibold">Neshanth R</h4>
                 <p class="text-blue-400">Vice Captain</p>
               </div>
@@ -304,7 +305,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="200">
             <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                <img src="assets/images/vigesh.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                <img src="{{ url_for('static', filename='assets/images/vigesh.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                 <h4 class="text-xl font-semibold">Vigesh</h4>
                 <p class="text-blue-400">Manager</p>
               </div>
@@ -324,7 +325,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden text-center p-2">
-                      <img src="assets/images/venu.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                      <img src="{{ url_for('static', filename='assets/images/venu.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">T Venumadhava Reddy</h4>
                       <p class="text-blue-400">Mech Lead</p>
                   </div>
@@ -341,7 +342,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="100">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                      <img src="assets/images/pranay.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                      <img src="{{ url_for('static', filename='assets/images/pranay.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Prajay</h4>
                       <p class="text-blue-400">ECE Lead</p>
                   </div>
@@ -358,7 +359,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="200">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                      <img src="assets/images/prithak.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                      <img src="{{ url_for('static', filename='assets/images/prithak.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Pritha K</h4>
                       <p class="text-blue-400">CSE Lead</p>
                   </div>
@@ -375,7 +376,7 @@
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="300">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                      <img src="assets/images/logo.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                      <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Akash</h4>
                       <p class="text-blue-400">CSE Lead</p>
                   </div>
@@ -407,28 +408,28 @@
               <div class="swiper-wrapper py-8">
                   <div class="swiper-slide h-auto">
                       <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40 h-full flex flex-col">
-                          <img src="drone1.jpg" alt="Drone Project" class="w-full h-56 object-cover rounded-lg mb-4">
+                          <img src="{{ url_for('static', filename='drone1.jpg') }}" alt="Drone Project" class="w-full h-56 object-cover rounded-lg mb-4">
                           <h3 class="text-xl font-semibold mb-2 text-center">Autonomous Drone</h3>
                           <p class="text-gray-300 text-sm leading-relaxed">Our autonomous drone project focuses on AI-based navigation using computer vision. It can detect obstacles, follow paths, and adapt to changing environments.</p>
                       </div>
                   </div>
                   <div class="swiper-slide h-auto">
                       <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/40 h-full flex flex-col">
-                          <img src="drone2.jpg" alt="Drone Workshop" class="w-full h-56 object-cover rounded-lg mb-4">
+                          <img src="{{ url_for('static', filename='drone2.jpg') }}" alt="Drone Workshop" class="w-full h-56 object-cover rounded-lg mb-4">
                           <h3 class="text-xl font-semibold mb-2 text-center">Drone Workshop</h3>
                           <p class="text-gray-300 text-sm leading-relaxed">We conducted an engaging workshop where students built drones from scratch. Participants explored hands-on drone mechanics and learned essential UAV technologies.</p>
                       </div>
                   </div>
                   <div class="swiper-slide h-auto">
                       <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/40 h-full flex flex-col">
-                          <img src="drone3.jpg" alt="Competition" class="w-full h-56 object-cover rounded-lg mb-4">
+                          <img src="{{ url_for('static', filename='drone3.jpg') }}" alt="Competition" class="w-full h-56 object-cover rounded-lg mb-4">
                           <h3 class="text-xl font-semibold mb-2 text-center">Competition Highlights</h3>
                           <p class="text-gray-300 text-sm leading-relaxed">Team Astra participated in inter-college drone racing events, showcasing speed, stability, and cutting-edge flight control against top teams.</p>
                       </div>
                   </div>
                   <div class="swiper-slide h-auto">
                       <div class="bg-[#111827] rounded-2xl overflow-hidden shadow-lg p-6 text-left transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/40 h-full flex flex-col">
-                          <img src="drone4.jpg" alt="Team Astra" class="w-full h-56 object-cover rounded-lg mb-4">
+                          <img src="{{ url_for('static', filename='drone4.jpg') }}" alt="Team Astra" class="w-full h-56 object-cover rounded-lg mb-4">
                           <h3 class="text-xl font-semibold mb-2 text-center">Team Astra</h3>
                           <p class="text-gray-300 text-sm leading-relaxed">Meet our passionate engineers and innovators. Team Astra blends creativity, coding, and mechanical expertise to develop drones for multiple domains.</p>
                       </div>
@@ -449,27 +450,27 @@
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 lg:gap-16 items-center">
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
-                <img src="assets/images/iiitdm.png" alt="IIITDM Kancheepuram" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="{{ url_for('static', filename='assets/images/iiitdm.png') }}" alt="IIITDM Kancheepuram" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">IIITDM Kancheepuram</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/images/DIC_LOGO.png" alt="DIC" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="{{ url_for('static', filename='assets/images/DIC_LOGO.png') }}" alt="DIC" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">DIC</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
-                <img src="assets/images/tlc.png" alt="TLC" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="{{ url_for('static', filename='assets/images/tlc.png') }}" alt="TLC" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">TLC</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
-                <img src="assets/images/solid.png" alt="Solid Works" class="h-24 w-auto hover:scale-110 transition-transform duration-300">
+                <img src="{{ url_for('static', filename='assets/images/solid.png') }}" alt="Solid Works" class="h-24 w-auto hover:scale-110 transition-transform duration-300">
                 <p class="mt-4 text-sm font-semibold">Solid Works</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
-                <img src="assets/images/anys.png" alt="Ansys" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="{{ url_for('static', filename='assets/images/anys.png') }}" alt="Ansys" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">Ansys</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
-                <img src="assets/images/Altium_Logo.png" alt="Altium" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="{{ url_for('static', filename='assets/images/Altium_Logo.png') }}" alt="Altium" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">Altium</p>
             </div>
         </div>
@@ -488,7 +489,7 @@
 
           <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div class="w-full md:w-1/2" data-aos="fade-right">
-                  <img src="assets/images/bronchure.png" alt="Project Image" class="w-full h-auto object-cover rounded-3xl shadow-2xl" />
+                  <img src="{{ url_for('static', filename='assets/images/bronchure.png') }}" alt="Project Image" class="w-full h-auto object-cover rounded-3xl shadow-2xl" />
               </div>
               <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-left">
                   <h3 class="text-3xl md:text-4xl font-semibold mb-6 leading-tight">Need More Information on Sponsoring?</h3>
@@ -578,21 +579,21 @@
     <div class="gallery-scroll-container">
         <div class="gradient-overlay"></div>
         <div class="gallery-scroll-track" id="galleryTrack">
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/Flight.png" alt="Drone Flight"><div class="topic">Drone Flight Test</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/ex.png" alt="Team Workshop"><div class="topic">Workshop</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/Testing.png" alt="Drone Assembly"><div class="topic">Drone Assembly</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/SAER.png" alt="SAE AEROTHON"><div class="topic">SAE Aerothon</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/teammeet.png" alt="Team Meeting"><div class="topic">Team Meeting</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/IROC.png" alt="IROC"><div class="topic">IROC</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/Delhi.png" alt="Award Ceremony"><div class="topic">Award Ceremony</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/Flight.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/Flight.png') }}" alt="Drone Flight"><div class="topic">Drone Flight Test</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/ex.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/ex.png') }}" alt="Team Workshop"><div class="topic">Workshop</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/Testing.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/Testing.png') }}" alt="Drone Assembly"><div class="topic">Drone Assembly</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/SAER.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/SAER.png') }}" alt="SAE AEROTHON"><div class="topic">SAE Aerothon</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/teammeet.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/teammeet.png') }}" alt="Team Meeting"><div class="topic">Team Meeting</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/IROC.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/IROC.png') }}" alt="IROC"><div class="topic">IROC</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/Delhi.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/Delhi.png') }}" alt="Award Ceremony"><div class="topic">Award Ceremony</div></a></div>
             
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/Flight.png" alt="Drone Flight"><div class="topic">Drone Flight Test</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/ex.png" alt="Team Workshop"><div class="topic">Workshop</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/Testing.png" alt="Drone Assembly"><div class="topic">Drone Assembly</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/SAER.png" alt="SAE AEROTHON"><div class="topic">SAE Aerothon</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/teammeet.png" alt="Team Meeting"><div class="topic">Team Meeting</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/IROC.png" alt="IROC"><div class="topic">IROC</div></a></div>
-            <div class="gallery-item"><a href="#" target="_blank"><img src="assets/images/Delhi.png" alt="Award Ceremony"><div class="topic">Award Ceremony</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/Flight.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/Flight.png') }}" alt="Drone Flight"><div class="topic">Drone Flight Test</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/ex.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/ex.png') }}" alt="Team Workshop"><div class="topic">Workshop</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/Testing.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/Testing.png') }}" alt="Drone Assembly"><div class="topic">Drone Assembly</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/SAER.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/SAER.png') }}" alt="SAE AEROTHON"><div class="topic">SAE Aerothon</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/teammeet.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/teammeet.png') }}" alt="Team Meeting"><div class="topic">Team Meeting</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/IROC.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/IROC.png') }}" alt="IROC"><div class="topic">IROC</div></a></div>
+            <div class="gallery-item"><a href="static/assets/images/Delhi.png" target="_blank"><img src="{{ url_for('static', filename='assets/images/Delhi.png') }}" alt="Award Ceremony"><div class="topic">Award Ceremony</div></a></div>
         </div>
     </div>
   </section>
@@ -609,13 +610,12 @@
         <div class="flex items-center gap-4 hover:scale-105 transition-transform">
           <i class="fas fa-envelope text-3xl text-purple-400"></i>
 
-          <a href="mailto:astra@iiitdm.ac.in 
-" class="hover:text-purple-400 transition-colors">astra@iiitdm.ac.in 
+          <a href="mailto:astra@iiitdm.ac.in" class="hover:text-purple-400 transition-colors">astra@iiitdm.ac.in 
 </a>
         </div>
         <div class="flex items-center gap-4 hover:scale-105 transition-transform">
           <i class="fas fa-map-marker-alt text-3xl text-purple-400"></i>
-         <a href="https://www.iiitdm.ac.in/" class="hover:text-purple-400 transition-colors">IIITDM Kancheepuram, Chennai</a>
+         <a href="https://www.google.com/maps/place/Indian+Institute+of+Information+Technology,+Design+and+Manufacturing,+Kancheepuram/@12.8395015,80.1349149,17z/data=!4m14!1m7!3m6!1s0x3a525851fbcd3b6b:0x9f1067aa71e3898e!2sIndian+Institute+of+Information+Technology,+Design+and+Manufacturing,+Kancheepuram!8m2!3d12.8394963!4d80.1374898!16s%2Fm%2F04144f8!3m5!1s0x3a525851fbcd3b6b:0x9f1067aa71e3898e!8m2!3d12.8394963!4d80.1374898!16s%2Fm%2F04144f8?entry=ttu&g_ep=EgoyMDI1MDkzMC4wIKXMDSoASAFQAw%3D%3D" class="hover:text-purple-400 transition-colors">IIITDM Kancheepuram, Chennai</a>
 
         </div>
       </div>
@@ -760,4 +760,4 @@
   </script>
 
 </body>
-
+</html>
