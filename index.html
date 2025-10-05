@@ -13,8 +13,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <style>
+    /* Example: using a star image as cursor */
+body {
+    cursor: url('assets/images/start.jpg'), auto;
+}
+
     body {
       margin: 0;
       background: radial-gradient(circle at center, #000000, #020116, #010d2e, #4c515f);
@@ -240,9 +246,22 @@
               </a>
           </div>
       </div>
-      <div class="flex-1 flex justify-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-          <model-viewer id="droneModel" src="assets/models/drone.glb" alt="A 3D drone" auto-rotate rotation-per-second="15deg" camera-controls shadow-intensity="1" disable-zoom></model-viewer>
-      </div>
+
+
+<div class="flex justify-center items-center h-screen">
+  <model-viewer 
+    class="w-96 h-96"
+    src="assets/models/drone.glb"
+    alt="A 3D drone"
+    auto-rotate
+    rotation-per-second="15deg"
+    camera-controls
+    shadow-intensity="1"
+    disable-zoom
+    scale="4.5 4.5 4.5">
+  </model-viewer>
+</div>
+
   </section>
 
   <section id="Team" class="py-20">
@@ -258,12 +277,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
+                  <div class="absolute inset-0 bg-[#010026] rounded-2xl flex flex-col items-center justify-center backface-hidden">
                       <img src="assets/images/abhisek.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Abhisek Sen</h4>
                       <p class="text-blue-400">Captain</p>
                   </div>
-                  <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+                  <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                       <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                       <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                           <a href="https://github.com/Abhisheksen8269" class="flex items-center gap-2 hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
@@ -275,12 +294,12 @@
           </div>
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="100">
             <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-              <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                <img src="assets/images/nesanth.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+              <div class="absolute inset-0 bg-[#010026] rounded-2xl flex flex-col items-center justify-center backface-hidden">
+                <img src="assets/images/nishant.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                 <h4 class="text-xl font-semibold">Neshanth R</h4>
                 <p class="text-blue-400">Vice Captain</p>
               </div>
-              <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+              <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                 <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                 <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                   <a href="#" class="flex items-center gap-2 hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
@@ -292,12 +311,12 @@
           </div>
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="200">
             <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-              <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
+              <div class="absolute inset-0 bg-[#010026] rounded-2xl flex flex-col items-center justify-center backface-hidden">
                 <img src="assets/images/vigesh.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                 <h4 class="text-xl font-semibold">Vigesh</h4>
                 <p class="text-blue-400">Manager</p>
               </div>
-              <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+              <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                 <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                 <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                   <a href="#" class="flex items-center gap-2 hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
@@ -312,12 +331,12 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden text-center p-2">
+                  <div class="absolute inset-0 bg-[#010026] rounded-2xl flex flex-col items-center justify-center backface-hidden text-center p-2">
                       <img src="assets/images/venu.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">T Venumadhava Reddy</h4>
                       <p class="text-blue-400">Mech Lead</p>
                   </div>
-                  <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+                  <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                       <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                       <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                           <a href="#" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
@@ -329,29 +348,29 @@
           </div>
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="100">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
+                  <div class="absolute inset-0 bg-[#010026] rounded-2xl flex flex-col items-center justify-center backface-hidden">
                       <img src="assets/images/pranay.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Prajay</h4>
                       <p class="text-blue-400">ECE Lead</p>
                   </div>
-                  <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+                  <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                       <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                       <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                           <a href="#" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
                           <a href="https://www.linkedin.com/in/satya-prajay-desamsetti-02a8812ab/" class="hover:text-blue-600"><i class="fab fa-linkedin text-2xl"></i></a>
-                          <a href="mailto:your.email@example.com" class="hover:text-pink-500"><i class="fas fa-envelope text-2xl"></i></a>>
+                          <a href="mailto:your.email@example.com" class="hover:text-pink-500"><i class="fas fa-envelope text-2xl"></i></a>
                       </div>
                   </div>
               </div>
           </div>
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="200">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
+                  <div class="absolute inset-0 bg-[#010026] rounded-2xl flex flex-col items-center justify-center backface-hidden">
                       <img src="assets/images/prithak.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Pritha K</h4>
                       <p class="text-blue-400">CSE Lead</p>
                   </div>
-                  <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+                  <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                       <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                       <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                           <a href="#" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
@@ -363,12 +382,12 @@
           </div>
           <div class="group h-80 [perspective:1000px] shadow-lg hover:shadow-blue-500/30 transition" data-aos="zoom-in" data-aos-delay="300">
               <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div class="absolute inset-0 bg-[#111827] rounded-2xl flex flex-col items-center justify-center backface-hidden">
-                      <img src="assets/images/logo.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
+                  <div class="absolute inset-0 rounded-2xl flex flex-col items-center justify-center backface-hidden">
+                      <img src="assets/images/akash.png" alt="Leader" class="w-32 h-32 mx-auto rounded-full object-cover mb-6">
                       <h4 class="text-xl font-semibold">Akash</h4>
                       <p class="text-blue-400">CSE Lead</p>
                   </div>
-                  <div class="absolute inset-0 bg-[#1f2937] rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
+                  <div class="absolute inset-0  rounded-2xl flex flex-col items-center justify-center [transform:rotateY(180deg)] backface-hidden p-4">
                       <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                       <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-lg">
                           <a href="#" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
@@ -442,7 +461,7 @@
                 <p class="mt-4 text-sm font-semibold">IIITDM Kancheepuram</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/images/dic.png" alt="DIC" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="assets/images/DIC_LOGO.png" alt="DIC" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">DIC</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
@@ -458,7 +477,7 @@
                 <p class="mt-4 text-sm font-semibold">Ansys</p>
             </div>
             <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
-                <img src="assets/images/altium.png" alt="Altium" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
+                <img src="assets/images/Altium_Logo.png" alt="Altium" class="h-24 w-auto hover:scale-110 transition-transform duration-300 rounded-full">
                 <p class="mt-4 text-sm font-semibold">Altium</p>
             </div>
         </div>
@@ -494,16 +513,17 @@
   
   <section id="Roadmap" class="py-20 text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-center text-center lg:text-left mb-12">
-        <span class="text-[8rem] lg:text-[14rem] font-extrabold text-purple-400 opacity-20 lg:opacity-40">4</span>
-        <div class="lg:-ml-8">
-          <h2 class="text-4xl lg:text-5xl font-bold text-sky-400 tracking-wide" data-aos="fade-right">Our Roadmap</h2>
-          <p class="text-gray-300 py-2 max-w-xl" data-aos="fade-right" data-aos-delay="100">Our Strategic Road Map: Milestones, Competitions, and Future Innovations.</p>
-        </div>
-      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-end text-center lg:text-right mb-12">
+              <div class="lg:text-right lg:-mr-8 order-2 lg:order-1">
+                  <h2 class="text-4xl lg:text-5xl font-bold tracking-wide">Our Roadmap</h2>
+                  <p class="text-gray-300 py-2 max-w-xl">Our Strategic Road Map: Milestones, Competitions, and Future Innovations.</p>
+              </div>
+              <span class="text-[8rem] lg:text-[14rem] font-extrabold text-purple-400 opacity-20 lg:opacity-40 order-1 lg:order-2">4</span>
+          </div>
 
       <div class="relative mt-12">
-        <div class="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-1 timeline-path z-0 min-w-[1500px]"></div>
+        <div class="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-1 timeline-path z-0 min-w-[100%]"></div>
         <div id="roadmap-container" class="overflow-x-auto pb-6 pt-10 no-scrollbar cursor-grab">
           <div class="flex relative min-w-[1500px]">
               <div class="group relative flex-shrink-0 w-60 mx-4" data-aos="fade-up">
@@ -596,11 +616,15 @@
       <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 text-lg mb-16">
         <div class="flex items-center gap-4 hover:scale-105 transition-transform">
           <i class="fas fa-envelope text-3xl text-purple-400"></i>
-          <a href="mailto:contact@astra.com" class="hover:text-purple-400 transition-colors">contact@astra.com</a>
+
+          <a href="mailto:astra@iiitdm.ac.in 
+" class="hover:text-purple-400 transition-colors">astra@iiitdm.ac.in 
+</a>
         </div>
         <div class="flex items-center gap-4 hover:scale-105 transition-transform">
           <i class="fas fa-map-marker-alt text-3xl text-purple-400"></i>
-          <span>IIITDM Kancheepuram, Chennai</span>
+         <a href="https://www.iiitdm.ac.in/" class="hover:text-purple-400 transition-colors">IIITDM Kancheepuram, Chennai</a>
+
         </div>
       </div>
       
@@ -649,7 +673,7 @@
                 if (window.innerWidth > 768) { // Only apply on larger screens
                     const x = (e.clientX / window.innerWidth - 0.5) * 60;
                     const y = (e.clientY / window.innerHeight - 0.5) * 40;
-                    drone.style.transform = translate(${x}px, ${y}px);
+                    drone.style.transform = `translate(${x}px, ${y}px)`;
                 }
             });
         }
@@ -744,5 +768,3 @@
   </script>
 
 </body>
-
-</html>
